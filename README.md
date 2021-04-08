@@ -1,6 +1,11 @@
 # Enigma
 An enigma machine I coded in python. Feel free to take a look!
 
+# Setup
+To run the Enigma machine on your computer, you can either:
+ - Dowload the .exe file which is essentially an app and run it
+ - Download the main.py file and run it in your python interpreter
+
 # Instructions
 
 **Setting Up The Plugborad**
