@@ -40,7 +40,7 @@ def key_down(e):
   if hasattr(e, 'char') and e.char.upper() in alphabet and e.char:
     if since_last_press() > press_data['threshold'] or e.char.upper() != press_data['last_key']:
       result = choose(e.char.upper(), plugboard)
-      time = '{:0>5}'.format("{:.2f}".format(since_last_press()))
+      time = '{:0>5}'.format("{:.2f}".format((t if (t:= since_last_press()) < 100 else 99.99)))
       print(f"key down - {time} - {e.char.upper()}: {result}")
       
   
@@ -137,7 +137,7 @@ def rotor_clicks(e):
           rotate(canvas, amount= 1 if rotate_down else -1, rotor= rot)
  
 def mouse_down(e):
-  if since_last_click() > press_data["threshold"] * 0.6:
+  if since_last_click() > press_data["threshold"] * 0.2:
     # Call all functions that use mouse down events
     change_screen(e)
     if press_data["showing_keyboard"]:
@@ -158,7 +158,6 @@ def import_button(rotors, plugboard):
   for key in list(plugboard.keys()).copy():
     plugboard.pop(key)
   # old keys have been removed, update them!
-  print(new_plugboard)
   plugboard.update(new_plugboard)
 def export_button():
   pyperclip.copy(export_config(rotors, plugboard))

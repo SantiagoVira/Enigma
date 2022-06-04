@@ -67,7 +67,6 @@ class Plug:
       pass
 
   def update(self):
-    print(f"Updating {self.letter}")
     # Update the state of a plug
     self.active = not self.active
     self.draw()

@@ -125,10 +125,10 @@ def choose(letter, plugboard):
 
   if letter in plugboard:
     letter = plugboard[letter]
-    
+
   indices = [letter]
   for j in range(2):
-    for i in range(3):
+    for i in (range(3) if j==0 else range(2, -1, -1)):
       # Turn a rotor to the current position it is at
       # Get the letter at the same index (Ex. turned 3 down, A -> X)
       indices.append(turn(rotors[i], rotor_wirings[i], down = j==0)[rotor_wirings[i].index(indices[-1])])
@@ -140,4 +140,3 @@ def choose(letter, plugboard):
   if final in plugboard:
     final = plugboard[final]
   return final
-
