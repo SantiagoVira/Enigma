@@ -1,8 +1,8 @@
 # Enigma
 
-Enigma simulator based on the original machine from WWII created using python.
+Simulator based on the original [Enigma Machine](https://en.wikipedia.org/wiki/Enigma_machine) from WWII created using python.
 
-Start up the projject by simply running the `main.py` file.
+Start up the project by simply running the `main.py` file.
 
 # Instructions
 
