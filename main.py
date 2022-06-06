@@ -152,13 +152,13 @@ def import_button(rotors, plugboard):
     return
   
   new_rotors, new_plugboard = import_config(pyperclip.paste())
-  for i, rot in enumerate(rotors):
-    rotors[i] = new_rotors[i]
+  for i, rot in enumerate(new_rotors):
+    rotors[i] = rot
   draw_rotors(canvas)
-  for key in list(plugboard.keys()).copy():
-    plugboard.pop(key)
-  # old keys have been removed, update them!
+
+  plugboard.clear()
   plugboard.update(new_plugboard)
+
 def export_button():
   pyperclip.copy(export_config(rotors, plugboard))
       
