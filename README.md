@@ -3,6 +3,7 @@
 Simulator based on the original [Enigma Machine](https://en.wikipedia.org/wiki/Enigma_machine) from WWII created using python.
 
 Before running the program, install pyperclip through `pip install pyperclip`
+
 Start up the project by simply running the `main.py` file.
 
 
